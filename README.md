@@ -27,7 +27,7 @@ Tots tenen un preu.
      
 - ARBRES:
   ```
-     TTTTTTT
+  TTTTTTT
   ```
   
 - FLORS:
