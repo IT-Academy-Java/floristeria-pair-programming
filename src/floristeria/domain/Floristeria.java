@@ -4,6 +4,7 @@ public class Floristeria {
     private String name;
 
     public Floristeria(String name) {
+
         this.name = name;
     }
 

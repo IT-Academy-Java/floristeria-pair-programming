@@ -1,6 +1,7 @@
 package floristeria.domain;
 
 public class Arbre extends Producte{
+
     private int heigth;
 
     public Arbre(int preu, int heigth) {

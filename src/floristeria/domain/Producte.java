@@ -6,7 +6,6 @@ public abstract class Producte {
 
     private static int COUNTER = 1;
 
-
     public Producte(int preu) {
 
         this.preu = preu;
