@@ -1,6 +1,7 @@
 package floristeria.domain;
 
 public class Decoracio extends Producte{
+
     private enum TypeMaterial { FUSTA, PLASTIC };
 
     private String typeMaterial;
