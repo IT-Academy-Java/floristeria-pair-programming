@@ -22,7 +22,7 @@ public class  FloreriaRepository {
 
     }
 
-    //add
+    //add 
     public void addProducte(Producte producte) throws Exception{
 
         if(producte == null) throw new Exception();
