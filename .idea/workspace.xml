@@ -20,7 +20,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5b2591e4-7ee6-4c0b-8757-9251c0076bbc" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/floristeria-pair-programming-master/src/floristeria/domain/Arbre.java" beforeDir="false" afterPath="$PROJECT_DIR$/floristeria-pair-programming-master/src/floristeria/domain/Arbre.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/floristeria-pair-programming-master/src/floristeria/domain/Decoracio.java" beforeDir="false" afterPath="$PROJECT_DIR$/floristeria-pair-programming-master/src/floristeria/domain/Decoracio.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/floristeria-pair-programming-master/src/floristeria/view/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/floristeria-pair-programming-master/src/floristeria/view/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,6 +43,9 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
   </component>
   <component name="RunManager">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
@@ -83,5 +90,15 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="121" y="0" key="#Project_Structure" timestamp="1593516615054">
+      <screen x="0" y="0" width="1280" height="683" />
+    </state>
+    <state x="121" y="0" key="#Project_Structure/0.0.1280.683@0.0.1280.683" timestamp="1593516615054" />
+    <state x="490" y="255" key="VCS.ChangelistChooser" timestamp="1593516902856">
+      <screen x="0" y="0" width="1280" height="683" />
+    </state>
+    <state x="490" y="255" key="VCS.ChangelistChooser/0.0.1280.683@0.0.1280.683" timestamp="1593516902856" />
   </component>
 </project>

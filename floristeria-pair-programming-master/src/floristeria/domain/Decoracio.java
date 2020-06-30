@@ -15,8 +15,5 @@ public class Decoracio extends Producte{
     public String toString() {
         return "Decoracio{" + "typeMaterial='" + typeMaterial + '\'' + '}';
     }
-<<<<<<< HEAD
 
-=======
->>>>>>> 4d2e6e2ee151ba09a3b3cf4f141dabc65abea1b2
 }
