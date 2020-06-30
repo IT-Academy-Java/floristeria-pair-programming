@@ -13,5 +13,4 @@ public class Arbre extends Producte{
     public String toString() {
         return "Arbre{" + "heigth=" + heigth +  '}';
     }
->>>>>>> dev:floristeria-pair-programming-master/src/floristeria/domain/Arbre.java
 }

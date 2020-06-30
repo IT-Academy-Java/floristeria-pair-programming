@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/floristeria-pair-programming-master.iml" filepath="$PROJECT_DIR$/floristeria-pair-programming-master.iml" />
+      <module fileurl="file://$PROJECT_DIR$/floristeria.iml" filepath="$PROJECT_DIR$/floristeria.iml" />
     </modules>
   </component>
 </project>
