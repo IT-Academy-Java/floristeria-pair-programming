@@ -6,12 +6,13 @@ public class Arbre extends Producte{
 
     public Arbre(int preu, int height) {
         super(preu);
+        this.isAArbre = true;
         this.height = height;
     }
 
     @Override
     public String toString() {
-        return "Arbre{" + "heigth=" + height +  '}';
+        return "Arbre{" + "preu=" + preu + " heigth=" + height +  '}' + "\n";
     }
 
 }

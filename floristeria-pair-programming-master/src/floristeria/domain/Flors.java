@@ -6,11 +6,12 @@ public class Flors extends Producte{
 
     public Flors(int preu, String color) {
         super(preu);
+        this.isAFlors = true;
         this.color = color;
     }
 
     @Override
     public String toString() {
-        return "Flors{" + "color='" + color + '\'' + '}';
+        return "Flors{" + "preu=" + preu + " color='" + color + '\'' + '}' + "\n";
     }
 }
