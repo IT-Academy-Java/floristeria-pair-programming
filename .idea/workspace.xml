@@ -20,15 +20,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5b2591e4-7ee6-4c0b-8757-9251c0076bbc" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/floristeria-pair-programming2.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/floristeria-pair-programming-master/src/floristeria/application/FloreriaController.java" beforeDir="false" afterPath="$PROJECT_DIR$/floristeria-pair-programming-master/src/floristeria/application/FloreriaController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/floristeria-pair-programming-master/src/floristeria/domain/Arbre.java" beforeDir="false" afterPath="$PROJECT_DIR$/floristeria-pair-programming-master/src/floristeria/domain/Arbre.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/floristeria-pair-programming-master/src/floristeria/domain/Decoracio.java" beforeDir="false" afterPath="$PROJECT_DIR$/floristeria-pair-programming-master/src/floristeria/domain/Decoracio.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/floristeria-pair-programming-master/src/floristeria/domain/Producte.java" beforeDir="false" afterPath="$PROJECT_DIR$/floristeria-pair-programming-master/src/floristeria/domain/Producte.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/floristeria-pair-programming-master/src/floristeria/view/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/floristeria-pair-programming-master/src/floristeria/view/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

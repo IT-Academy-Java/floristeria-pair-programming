@@ -13,5 +13,8 @@ public class Arbre extends Producte{
     public String toString() {
         return "Arbre{" + "heigth=" + height +  '}';
     }
+<<<<<<< HEAD
 
+=======
+>>>>>>> 4d2e6e2ee151ba09a3b3cf4f141dabc65abea1b2
 }
