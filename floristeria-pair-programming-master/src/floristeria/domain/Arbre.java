@@ -2,16 +2,16 @@ package floristeria.domain;
 
 public class Arbre extends Producte{
 
-    private int heigth;
+    private int height;
 
-    public Arbre(int preu, int heigth) {
+    public Arbre(int preu, int height) {
         super(preu);
-        this.heigth = heigth;
+        this.height = height;
     }
 
     @Override
     public String toString() {
-        return "Arbre{" + "heigth=" + heigth +  '}';
+        return "Arbre{" + "heigth=" + height +  '}';
     }
->>>>>>> dev:floristeria-pair-programming-master/src/floristeria/domain/Arbre.java
+
 }

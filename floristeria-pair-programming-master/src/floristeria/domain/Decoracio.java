@@ -15,5 +15,5 @@ public class Decoracio extends Producte{
     public String toString() {
         return "Decoracio{" + "typeMaterial='" + typeMaterial + '\'' + '}';
     }
->>>>>>> dev:floristeria-pair-programming-master/src/floristeria/domain/Decoracio.java
+
 }
