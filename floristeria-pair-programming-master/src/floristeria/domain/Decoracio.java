@@ -8,12 +8,13 @@ public class Decoracio extends Producte{
 
     public Decoracio(int preu, String typeMaterial) {
         super(preu);
+        this.isADecoracio = true;
         this.typeMaterial = typeMaterial;
     }
 
     @Override
     public String toString() {
-        return "Decoracio{" + "typeMaterial='" + typeMaterial + '\'' + '}';
+        return "Decoracio{" + "preu=" + preu + " typeMaterial='" + typeMaterial + '\'' + '}' + "\n";
     }
 
 }

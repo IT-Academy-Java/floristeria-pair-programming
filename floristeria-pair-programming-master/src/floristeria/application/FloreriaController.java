@@ -12,14 +12,10 @@ public class FloreriaController {
     private int florsCounter;
     private int decoracioCounter;
 
-
     //Empty constructor
-    public FloreriaController() {
-
-    }
+    public FloreriaController() { }
 
     //Getters
-
     public int getArbreCounter() {
         return arbreCounter;
     }
@@ -32,67 +28,43 @@ public class FloreriaController {
         return decoracioCounter;
     }
 
-
-
-
     public void createArbre(int preu, int height) throws Exception{
-
         Arbre arbre = new Arbre (preu, height);
         repository.addProducte(arbre);
         arbreCounter++;
-
     }
 
     public void createFlors(int preu, String color) throws Exception{
-
         Flors flors = new Flors (preu, color);
         repository.addProducte(flors);
         florsCounter++;
     }
 
     public void createDecoracio(int preu, String typeMaterial) throws Exception{
-
         Decoracio decoracio = new Decoracio (preu, typeMaterial);
         repository.addProducte(decoracio);
         decoracioCounter++;
     }
 
-
     //imprimir todos
     public String getAllProducte() {
+        String resultsTrees = "";
+        String resultsFlowers = "";
+        String resultsDecoration = "";
 
-        String results="";
+        for (int i = 0; i < repository.getProducte().size(); i++) {
+            if (repository.getProducte().get(i).isAArbre()) {
+                resultsTrees += repository.getProducte().get(i).toString();
+            } else if (repository.getProducte().get(i).isAFlors()) {
+                resultsFlowers += repository.getProducte().get(i).toString();
 
-            results += "TREES:\n";
-            for (int i = 0; i < repository.getProducte().size(); i++) {
-
-                if (repository.getProducte().get(i).isAArbre() == true) {
-
-                    results += repository.getProducte().get(i).toString();
-                }
+            } else if (repository.getProducte().get(i).isADecoracio() == true) {
+                resultsDecoration += repository.getProducte().get(i).toString();
+            } else{
+                System.out.println("Product Incorrect");
             }
+        }
 
-            results += "FLOWERS:\n";
-            for (int i = 0; i < repository.getProducte().size(); i++) {
-
-                if (repository.getProducte().get(i).isAFlors() == true) {
-
-                    results += repository.getProducte().get(i).toString();
-
-                }
-            }
-
-            results += "DECORATION:\n";
-            for (int i = 0; i < repository.getProducte().size(); i++) {
-
-                if (repository.getProducte().get(i).isADecoracio() == true) {
-
-                    results += repository.getProducte().get(i).toString();
-
-                }
-            }
-
-        return results;
-
+        return "TREES:\n" + resultsTrees + "\nFLOWERS:\n" + resultsFlowers + "\nDECORATION:\n" + resultsDecoration;
     }
 }
