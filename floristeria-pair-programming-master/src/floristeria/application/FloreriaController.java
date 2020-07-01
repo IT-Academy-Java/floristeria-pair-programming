@@ -65,6 +65,6 @@ public class FloreriaController {
             }
         }
 
-        return "TREES:\n" + resultsTrees + "\nFLOWERS:\n" + resultsFlowers + "\nDECORATION:\n" + resultsDecoration;
+        return "ARBRES:\n" + resultsTrees + "\nFLORS:\n" + resultsFlowers + "\nDECORACIO:\n" + resultsDecoration;
     }
 }
