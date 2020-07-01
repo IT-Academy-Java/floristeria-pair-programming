@@ -16,7 +16,8 @@ public class Main {
         controller.createFlors(20,"blue");
         controller.createDecoracio(20, "plastico");
 
-        controller.getAllProducte();
+        System.out.println(controller.getAllProducte());
+
 
     }
 }
