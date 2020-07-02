@@ -12,6 +12,8 @@ public class Main {
 
     public static void main(String[] args) throws Exception {
 
+        controller.createFloristeria("Lirios");
+
         controller.createArbre(20,30);
         controller.createArbre(10,50);
         controller.createArbre(70,30);

@@ -2,6 +2,7 @@ package floristeria.application;
 
 import floristeria.domain.Arbre;
 import floristeria.domain.Decoracio;
+import floristeria.domain.Floristeria;
 import floristeria.domain.Flors;
 import floristeria.persistence.FloreriaRepository;
 
@@ -11,9 +12,12 @@ public class FloreriaController {
     private int arbreCounter;
     private int florsCounter;
     private int decoracioCounter;
+    private Floristeria floristeria;
 
     //Empty constructor
-    public FloreriaController() { }
+    public FloreriaController() {
+
+    }
 
     //Getters
     public int getArbreCounter() {
@@ -26,6 +30,10 @@ public class FloreriaController {
 
     public int getDecoracioCounter() {
         return decoracioCounter;
+    }
+
+    public void createFloristeria(String name){
+        this.floristeria = new Floristeria(name);
     }
 
     public void createArbre(int preu, int height) throws Exception{
