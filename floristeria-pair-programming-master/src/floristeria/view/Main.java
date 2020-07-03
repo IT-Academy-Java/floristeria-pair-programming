@@ -6,6 +6,8 @@ import floristeria.domain.Decoracio;
 import floristeria.domain.Floristeria;
 import floristeria.domain.Flors;
 
+import javax.swing.*;
+
 public class Main {
 
     private static FloreriaController controller = new FloreriaController();
@@ -23,14 +25,85 @@ public class Main {
         controller.createFlors(20,"red");
 
 
-        System.out.println(controller.getAllProducte());
-
-
         controller.createDecoracio(20, "FUSTA");
         controller.createDecoracio(20, "PLASTIC");
         controller.createDecoracio(20, "FUSTA");
 
 
-         System.out.println(controller.getAllProducte());
+        String missatge = "1:[Afegir producte]  2:[Eliminar producte]  3:[Veure Stock]  0:[Sortir]";
+
+        System.out.println(missatge);
+        String userOption = JOptionPane.showInputDialog(missatge);
+
+        while (!userOption.equals("0")) {
+
+            switch (userOption) {
+
+                case "1": // Afegir
+                    afegir();
+
+                    userOption = JOptionPane.showInputDialog(missatge);
+                    break;
+
+                case "2": //Eliminar
+                    eliminar();
+
+                    userOption = JOptionPane.showInputDialog(missatge);
+                    break;
+
+                case "3": //Veure stock
+                    System.out.println(controller.getAllProducte());
+
+                    userOption = JOptionPane.showInputDialog(missatge);
+                    break;
+
+                default:
+                    System.out.println("Error, torna a introduir 1,2,3  o 0");
+
+                    userOption = JOptionPane.showInputDialog(missatge);
+                    break;
+            }
+        }
+    }
+
+    private static void eliminar() {
+
+    }
+
+    private static void afegir() {
+
+        System.out.println("Que vols afegir?");
+
+        String missatge = "1:[Arbre]  2:[Flors]  3:[Decoració]  0:[Sortir]";
+
+        System.out.println(missatge);
+        String userOption = JOptionPane.showInputDialog(missatge);
+
+        while (!userOption.equals("0")) {
+
+            switch (userOption) {
+
+                case "1": // Afegir Arbre
+
+                    userOption = JOptionPane.showInputDialog(missatge);
+                    break;
+
+                case "2": //Afegir Flors
+
+                    userOption = JOptionPane.showInputDialog(missatge);
+                    break;
+
+                case "3": //Afegir Decoració
+
+                    userOption = JOptionPane.showInputDialog(missatge);
+                    break;
+
+                default:
+                    System.out.println("Error, torna a introduir 1,2 o 0");
+
+                    userOption = JOptionPane.showInputDialog(missatge);
+                    break;
+            }
+        }
     }
 }
