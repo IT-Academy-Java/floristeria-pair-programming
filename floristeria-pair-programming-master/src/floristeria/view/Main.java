@@ -15,18 +15,8 @@ public class Main {
     public static void main(String[] args) throws Exception {
 
         controller.createFloristeria("Lirios");
-
         controller.createArbre(20,30);
-        controller.createArbre(10,50);
-        controller.createArbre(70,30);
-
         controller.createFlors(20,"blue");
-        controller.createFlors(40,"white");
-        controller.createFlors(20,"red");
-
-
-        controller.createDecoracio(20, "FUSTA");
-        controller.createDecoracio(20, "PLASTIC");
         controller.createDecoracio(20, "FUSTA");
 
 
@@ -70,40 +60,37 @@ public class Main {
 
     }
 
-    private static void afegir() {
+    private static void afegir() throws Exception {
 
-        System.out.println("Que vols afegir?");
+        Object[] possibleValues = { "Arbre", "Flors", "Decoracio" };
+        Object userOption = JOptionPane.showInputDialog(null, "Que vols afegir?", "AFEGIR",
+                JOptionPane.INFORMATION_MESSAGE, null, possibleValues, possibleValues[0]);
 
-        String missatge = "1:[Arbre]  2:[Flors]  3:[Decoració]  0:[Sortir]";
 
-        System.out.println(missatge);
-        String userOption = JOptionPane.showInputDialog(missatge);
+        if ("Arbre".equals(userOption)) {
 
-        while (!userOption.equals("0")) {
+            int preu = Integer.parseInt(JOptionPane.showInputDialog("Introdueix preu:"));
+            int altura = Integer.parseInt(JOptionPane.showInputDialog("Introdueix l'altura:"));
 
-            switch (userOption) {
+            controller.createArbre(preu, altura);
 
-                case "1": // Afegir Arbre
 
-                    userOption = JOptionPane.showInputDialog(missatge);
-                    break;
+        } else if ("Flors".equals(userOption)) {
 
-                case "2": //Afegir Flors
+            int preu = Integer.parseInt(JOptionPane.showInputDialog("Introdueix preu:"));
+            String color = (JOptionPane.showInputDialog("Introdueix color:"));
 
-                    userOption = JOptionPane.showInputDialog(missatge);
-                    break;
+            controller.createFlors(preu,color);
 
-                case "3": //Afegir Decoració
+        } else if ("Decoracio".equals(userOption)) {
 
-                    userOption = JOptionPane.showInputDialog(missatge);
-                    break;
+            int preu = Integer.parseInt(JOptionPane.showInputDialog("Introdueix preu:"));
+            String material = (JOptionPane.showInputDialog("Introdueix material:"));
 
-                default:
-                    System.out.println("Error, torna a introduir 1,2 o 0");
+            controller.createDecoracio(preu, material);
 
-                    userOption = JOptionPane.showInputDialog(missatge);
-                    break;
-            }
+        } else {
+            System.out.println("Error");
         }
     }
 }
