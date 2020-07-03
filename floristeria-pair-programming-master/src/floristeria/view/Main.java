@@ -85,9 +85,11 @@ public class Main {
         } else if ("Decoracio".equals(userOption)) {
 
             int preu = Integer.parseInt(JOptionPane.showInputDialog("Introdueix preu:"));
-            String material = (JOptionPane.showInputDialog("Introdueix material:"));
+            Object[] OpcioMaterial = { "FUSTA", "PLASTIC"};
+            Object material = JOptionPane.showInputDialog(null, "Quin material?", "AFEGIR",
+                    JOptionPane.INFORMATION_MESSAGE, null, OpcioMaterial, OpcioMaterial[0]);
 
-            controller.createDecoracio(preu, material);
+            controller.createDecoracio(preu, (String) material);
 
         } else {
             System.out.println("Error");
