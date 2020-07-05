@@ -4,6 +4,8 @@ public class Arbre extends Producte{
 
     private int height;
 
+    public Arbre(){}
+
     public Arbre(int preu, int height) {
         super(preu);
         this.isAArbre = true;
