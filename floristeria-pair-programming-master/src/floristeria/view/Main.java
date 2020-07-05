@@ -1,12 +1,12 @@
 package floristeria.view;
 
 import floristeria.application.FloreriaController;
-import floristeria.domain.Arbre;
-import floristeria.domain.Decoracio;
-import floristeria.domain.Floristeria;
-import floristeria.domain.Flors;
+import floristeria.domain.*;
 
 import javax.swing.*;
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
 
 public class Main {
 
@@ -15,8 +15,14 @@ public class Main {
     public static void main(String[] args) throws Exception {
 
         controller.createFloristeria("Lirios");
+
         controller.createArbre(20,30);
         controller.createFlors(20,"blue");
+
+        controller.createArbre(20,30);
+        controller.createFlors(20,"blue");
+
+        controller.createDecoracio(20, "FUSTA");
         controller.createDecoracio(20, "FUSTA");
 
 
@@ -56,8 +62,36 @@ public class Main {
         }
     }
 
-    private static void eliminar() {
+    private static void eliminar() throws Exception {
+        Object[] possibleValues = { "Arbre", "Flors", "Decoracio" };
+        Object userOption = JOptionPane.showInputDialog(null, "Que vols eliminar?", "ELIMINAR",
+                JOptionPane.INFORMATION_MESSAGE, null, possibleValues, possibleValues[0]);
 
+        List<Producte> productes = new ArrayList<>();
+        int idProductToDelete = 0;
+
+        switch (userOption.toString()){
+            case "Arbre":
+                productes = controller.getArbres();
+                iterarArrayList(productes);
+                idProductToDelete = Integer.parseInt(JOptionPane.showInputDialog("Introdueix id del producte per a eliminar:"));
+                controller.deleteProducte(idProductToDelete);
+                break;
+            case "Flors":
+                productes = controller.getFlors();
+                iterarArrayList(productes);
+                idProductToDelete = Integer.parseInt(JOptionPane.showInputDialog("Introdueix id del producte per a eliminar:"));
+                controller.deleteProducte(idProductToDelete);
+                break;
+            case "Decoracio":
+                productes = controller.getDecoracions();
+                iterarArrayList(productes);
+                idProductToDelete = Integer.parseInt(JOptionPane.showInputDialog("Introdueix id del producte per a eliminar:"));
+                controller.deleteProducte(idProductToDelete);
+                break;
+            default:
+                System.out.println("Error");
+        }
     }
 
     private static void afegir() throws Exception {
@@ -93,6 +127,14 @@ public class Main {
 
         } else {
             System.out.println("Error");
+        }
+    }
+
+    public static void iterarArrayList(List<Producte> productes){
+        Iterator it = productes.iterator();
+        System.out.println("******** Llistat actual, trii el ID a esborrar **********");
+        while(it.hasNext()){
+            System.out.println(it.next().toString());
         }
     }
 }

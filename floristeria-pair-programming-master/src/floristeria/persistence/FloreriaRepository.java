@@ -14,7 +14,7 @@ public class  FloreriaRepository {
     public FloreriaRepository() { }
 
     //getter
-    public List<Producte> getProducte() {
+    public List<Producte> getProductes() {
         return productes;
     }
 
@@ -24,6 +24,14 @@ public class  FloreriaRepository {
             throw new Exception();
         } else{
             productes.add(producte);
+        }
+    }
+
+    public void deleteProducte(int position) throws Exception{
+        if(position != (int)position){
+            throw new Exception();
+        } else{
+            productes.remove(position);
         }
     }
 }

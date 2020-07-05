@@ -5,6 +5,8 @@ public class Decoracio extends Producte{
     private enum TypeMaterial { FUSTA, PLASTIC };
 
     private String typeMaterial;
+    private int count = -1;
+    private int id = -1;
 
     public Decoracio(){}
 
@@ -14,9 +16,9 @@ public class Decoracio extends Producte{
         this.typeMaterial = typeMaterial;
     }
 
+
     @Override
     public String toString() {
-        return "Decoracio{" + "preu=" + preu + " typeMaterial='" + typeMaterial + '\'' + '}' + "\n";
+        return super.toString() + ", typeMaterial='" + typeMaterial + '\'' + ", preu=" + preu  + "\n";
     }
-
 }

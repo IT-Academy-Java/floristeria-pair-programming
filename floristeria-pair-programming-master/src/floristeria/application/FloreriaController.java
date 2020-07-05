@@ -4,7 +4,6 @@ import floristeria.domain.*;
 import floristeria.persistence.FloreriaRepository;
 
 import java.util.ArrayList;
-import java.util.Iterator;
 import java.util.List;
 
 public class FloreriaController {
@@ -55,15 +54,20 @@ public class FloreriaController {
         decoracioCounter++;
     }
 
+    public void deleteProducte(int idProductToDelete) throws Exception {
+        for (int i = 0; i < repository.getProductes().size(); i++) {
+            if (repository.getProductes().get(i).getID() == idProductToDelete) {
+                repository.deleteProducte(i);
+                return;
+            }
+        }
+    }
+
     public List<Producte> getArbres(){
         List<Producte> productes = new ArrayList<>();
-        Arbre arbre = new Arbre();
-
-        Iterator it = repository.getProducte().iterator();
-        while(it.hasNext()){
-            arbre = (Arbre) it.next();
-            if(arbre.isAArbre()){
-                productes.add(arbre);
+        for (int i = 0; i < repository.getProductes().size(); i++) {
+            if (repository.getProductes().get(i).isAArbre()) {
+                productes.add(repository.getProductes().get(i));
             }
         }
         return productes;
@@ -71,13 +75,9 @@ public class FloreriaController {
 
     public List<Producte> getFlors(){
         List<Producte> productes = new ArrayList<>();
-        Flors flor = new Flors();
-
-        Iterator it = repository.getProducte().iterator();
-        while(it.hasNext()){
-            flor = (Flors) it.next();
-            if(flor.isAFlors()){
-                productes.add(flor);
+        for (int i = 0; i < repository.getProductes().size(); i++) {
+            if (repository.getProductes().get(i).isAFlors()) {
+                productes.add(repository.getProductes().get(i));
             }
         }
         return productes;
@@ -85,13 +85,9 @@ public class FloreriaController {
 
     public List<Producte> getDecoracions(){
         List<Producte> productes = new ArrayList<>();
-        Decoracio decoracio = new Decoracio();
-
-        Iterator it = repository.getProducte().iterator();
-        while(it.hasNext()){
-            decoracio = (Decoracio) it.next();
-            if(decoracio.isADecoracio()){
-                productes.add(decoracio);
+        for (int i = 0; i < repository.getProductes().size(); i++) {
+            if (repository.getProductes().get(i).isADecoracio()) {
+                productes.add(repository.getProductes().get(i));
             }
         }
         return productes;
@@ -104,14 +100,14 @@ public class FloreriaController {
         String resultsFlowers = "";
         String resultsDecoration = "";
 
-        for (int i = 0; i < repository.getProducte().size(); i++) {
-            if (repository.getProducte().get(i).isAArbre()) {
-                resultsTrees += repository.getProducte().get(i).toString();
-            } else if (repository.getProducte().get(i).isAFlors()) {
-                resultsFlowers += repository.getProducte().get(i).toString();
+        for (int i = 0; i < repository.getProductes().size(); i++) {
+            if (repository.getProductes().get(i).isAArbre()) {
+                resultsTrees += repository.getProductes().get(i).toString();
+            } else if (repository.getProductes().get(i).isAFlors()) {
+                resultsFlowers += repository.getProductes().get(i).toString();
 
-            } else if (repository.getProducte().get(i).isADecoracio() == true) {
-                resultsDecoration += repository.getProducte().get(i).toString();
+            } else if (repository.getProductes().get(i).isADecoracio() == true) {
+                resultsDecoration += repository.getProductes().get(i).toString();
             } else{
                 System.out.println("Product Incorrect");
             }
