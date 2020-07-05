@@ -9,12 +9,12 @@ public abstract class Producte {
 
     private static int COUNTER = 1;
 
-    public Producte(int preu) {
+    public Producte(){}
 
+    public Producte(int preu) {
         this.preu = preu;
         this.id = COUNTER;
         COUNTER++;
-
     }
 
     public boolean isAArbre() {
