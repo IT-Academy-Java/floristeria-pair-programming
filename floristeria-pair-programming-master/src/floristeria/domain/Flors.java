@@ -4,6 +4,8 @@ public class Flors extends Producte{
 
     private String color;
 
+    public Flors(){}
+
     public Flors(int preu, String color) {
         super(preu);
         this.isAFlors = true;
