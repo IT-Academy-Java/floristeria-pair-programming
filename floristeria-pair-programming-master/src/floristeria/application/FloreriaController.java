@@ -1,10 +1,11 @@
 package floristeria.application;
 
-import floristeria.domain.Arbre;
-import floristeria.domain.Decoracio;
-import floristeria.domain.Floristeria;
-import floristeria.domain.Flors;
+import floristeria.domain.*;
 import floristeria.persistence.FloreriaRepository;
+
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
 
 public class FloreriaController {
 
@@ -53,6 +54,49 @@ public class FloreriaController {
         repository.addProducte(decoracio);
         decoracioCounter++;
     }
+
+    public List<Producte> getArbres(){
+        List<Producte> productes = new ArrayList<>();
+        Arbre arbre = new Arbre();
+
+        Iterator it = repository.getProducte().iterator();
+        while(it.hasNext()){
+            arbre = (Arbre) it.next();
+            if(arbre.isAArbre()){
+                productes.add(arbre);
+            }
+        }
+        return productes;
+    }
+
+    public List<Producte> getFlors(){
+        List<Producte> productes = new ArrayList<>();
+        Flors flor = new Flors();
+
+        Iterator it = repository.getProducte().iterator();
+        while(it.hasNext()){
+            flor = (Flors) it.next();
+            if(flor.isAFlors()){
+                productes.add(flor);
+            }
+        }
+        return productes;
+    }
+
+    public List<Producte> getDecoracions(){
+        List<Producte> productes = new ArrayList<>();
+        Decoracio decoracio = new Decoracio();
+
+        Iterator it = repository.getProducte().iterator();
+        while(it.hasNext()){
+            decoracio = (Decoracio) it.next();
+            if(decoracio.isADecoracio()){
+                productes.add(decoracio);
+            }
+        }
+        return productes;
+    }
+
 
     //imprimir todos
     public String getAllProducte() {
