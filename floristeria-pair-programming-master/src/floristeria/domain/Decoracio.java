@@ -6,6 +6,8 @@ public class Decoracio extends Producte{
 
     private String typeMaterial;
 
+    public Decoracio(){}
+
     public Decoracio(int preu, String typeMaterial) {
         super(preu);
         this.isADecoracio = true;
