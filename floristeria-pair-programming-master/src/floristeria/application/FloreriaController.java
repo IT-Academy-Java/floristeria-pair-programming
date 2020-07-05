@@ -1,10 +1,10 @@
 package floristeria.application;
 
-import floristeria.domain.Arbre;
-import floristeria.domain.Decoracio;
-import floristeria.domain.Floristeria;
-import floristeria.domain.Flors;
+import floristeria.domain.*;
 import floristeria.persistence.FloreriaRepository;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class FloreriaController {
 
@@ -54,20 +54,60 @@ public class FloreriaController {
         decoracioCounter++;
     }
 
+    public void deleteProducte(int idProductToDelete) throws Exception {
+        for (int i = 0; i < repository.getProductes().size(); i++) {
+            if (repository.getProductes().get(i).getID() == idProductToDelete) {
+                repository.deleteProducte(i);
+                return;
+            }
+        }
+    }
+
+    public List<Producte> getArbres(){
+        List<Producte> productes = new ArrayList<>();
+        for (int i = 0; i < repository.getProductes().size(); i++) {
+            if (repository.getProductes().get(i).isAArbre()) {
+                productes.add(repository.getProductes().get(i));
+            }
+        }
+        return productes;
+    }
+
+    public List<Producte> getFlors(){
+        List<Producte> productes = new ArrayList<>();
+        for (int i = 0; i < repository.getProductes().size(); i++) {
+            if (repository.getProductes().get(i).isAFlors()) {
+                productes.add(repository.getProductes().get(i));
+            }
+        }
+        return productes;
+    }
+
+    public List<Producte> getDecoracions(){
+        List<Producte> productes = new ArrayList<>();
+        for (int i = 0; i < repository.getProductes().size(); i++) {
+            if (repository.getProductes().get(i).isADecoracio()) {
+                productes.add(repository.getProductes().get(i));
+            }
+        }
+        return productes;
+    }
+
+
     //imprimir todos
     public String getAllProducte() {
         String resultsTrees = "";
         String resultsFlowers = "";
         String resultsDecoration = "";
 
-        for (int i = 0; i < repository.getProducte().size(); i++) {
-            if (repository.getProducte().get(i).isAArbre()) {
-                resultsTrees += repository.getProducte().get(i).toString();
-            } else if (repository.getProducte().get(i).isAFlors()) {
-                resultsFlowers += repository.getProducte().get(i).toString();
+        for (int i = 0; i < repository.getProductes().size(); i++) {
+            if (repository.getProductes().get(i).isAArbre()) {
+                resultsTrees += repository.getProductes().get(i).toString();
+            } else if (repository.getProductes().get(i).isAFlors()) {
+                resultsFlowers += repository.getProductes().get(i).toString();
 
-            } else if (repository.getProducte().get(i).isADecoracio() == true) {
-                resultsDecoration += repository.getProducte().get(i).toString();
+            } else if (repository.getProductes().get(i).isADecoracio() == true) {
+                resultsDecoration += repository.getProductes().get(i).toString();
             } else{
                 System.out.println("Product Incorrect");
             }
