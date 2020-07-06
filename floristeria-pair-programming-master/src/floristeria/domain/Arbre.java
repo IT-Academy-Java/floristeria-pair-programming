@@ -18,6 +18,6 @@ public class Arbre extends Producte{
 
     @Override
     public String toString() {
-        return super.toString() + ", height=" + height + ", preu=" + preu + "\n";
+        return super.toString() + ", height=" + height + "\n";
     }
 }

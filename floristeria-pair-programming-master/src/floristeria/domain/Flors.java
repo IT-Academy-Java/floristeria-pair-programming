@@ -14,6 +14,6 @@ public class Flors extends Producte{
 
     @Override
     public String toString() {
-        return super.toString() + ", color='" + color + '\'' + ", preu=" + preu + "\n";
+        return super.toString() + ", color='" + color + '\'' + "\n";
     }
 }

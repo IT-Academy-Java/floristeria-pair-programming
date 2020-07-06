@@ -19,6 +19,6 @@ public class Decoracio extends Producte{
 
     @Override
     public String toString() {
-        return super.toString() + ", typeMaterial='" + typeMaterial + '\'' + ", preu=" + preu  + "\n";
+        return super.toString() + ", typeMaterial='" + typeMaterial + '\'' + "\n";
     }
 }
